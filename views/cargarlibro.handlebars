@@ -1,0 +1,48 @@
+<!--Form a completar-->
+
+<h2><small> Agregar un libro </small></h2> 
+  
+  <div class="col-6">
+         
+  <form class="form" method="post">
+
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" class= "form-control" placeholder="titulo" name="titulo" id="titulo" value="{{{datos.titulo}}}">
+    </div>
+             
+    <div class="form-group">
+        <label for="autor">Autor</label>
+        <input type="text" class= "form-control" placeholder="autor" name="autor" id="autor" value="{{{datos.autor}}}">
+    </div>
+              
+    <div class="form-group">
+        <label for="sinopsis">Sinopsis</label>
+        <textarea class= "form-control" name="sinopsis" id="sinopsis">{{{datos.sinopsis}}} </textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="editorial">Editorial</label>
+        <input type="text" class= "form-control" placeholder="editorial" name="editorial" id="editorial" value="{{{datos.editorial}}}">   
+    </div>
+            
+    <!--<input type="file" name="imagen" />-->
+            
+    <div class="form-group">
+      <label for="">Género literario</label>
+      <div class="checkbox">
+      <label class="checkbox-inline"><input type="checkbox"> Novela </label>
+      <label class="checkbox-inline"><input type="checkbox"> Ficción </label>
+      <label class="checkbox-inline"><input type="checkbox"> Autoayuda </label>
+      <label class="checkbox-inline"><input type="checkbox"> Cocina </label>
+      <label class="checkbox-inline"><input type="checkbox"> Historia </label>
+      <label class="checkbox-inline"><input type="checkbox"> Infantiles </label>
+      <label class="checkbox-inline"><input type="checkbox"> Biografía </label>
+      <label class="checkbox-inline"><input type="checkbox"> Ciencia </label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    
+  </form>
+  
+  </div>

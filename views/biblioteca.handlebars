@@ -1,0 +1,26 @@
+<!--Libros agregados-->
+                 
+{{#each biblioteca}}
+  
+<div class="row row-cols-1 row-cols-md-3">
+  <div class="col mb-4">
+      
+    <div class="card h-100">
+      <img src="{{{imagen}}}" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title" >{{{titulo}}}</h5>
+          <p class="card-text">{{{sinopsis}}}</p>
+          <h6 class="card-subtitle mb-2 text-muted">Autor: {{{autor}}}</h6>
+          <a href="/vermas/{{_id}}" class="btn btn-outline-primary btn-sm">Ver más</a>
+        </div>
+      
+        <div class="card-body">
+          <a href="/editar/{{_id}}" class="btn btn-primary btn-sm">Editar</a>
+          <a href="/borrar/{{_id}}" class="btn btn-danger btn-sm">Borrar</a>
+        </div>
+    </div>
+      
+  </div>
+</div>
+
+{{/each}}

@@ -1,0 +1,27 @@
+<!--Cada libro-->
+
+
+<div class="card w-75">
+  
+  <img class="card-img-top" src="{{{imagen}}}" alt="">
+  <div class="card-body">
+    <h5 class="card-title" >{{{info.titulo}}}</h5>
+    <p class="card-text">{{{info.sinopsis}}}</p>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Autor: {{{info.autor}}}</li>
+    <li class="list-group-item">Editorial: {{{info.editorial}}}</li>
+    <li class="list-group-item">Género: {{{info.genero}}}</li>
+  </ul>
+  
+  <!-- Aun no funcionan desde acá. Andan desde la principal-->
+  <div class="card-body">
+    <a href="/editar/{{_id}}" class="btn btn-primary btn-sm">Editar</a>
+    <a href="/borrar/{{_id}}" class="btn btn-danger btn-sm">Borrar</a>
+  </div> 
+
+</div>
+
+
+
