@@ -51,7 +51,16 @@ const UsuarioModel = mongoose.model('Usuarios', UsuarioSchema);
 
 //Todos los libros
 app.get('/', async function (req, res) {
-    const biblioteca = await LibroModel.find().lean();
+    // Si existe req.query.busqueda entonces hay que filtrar por ese nombre
+    // Si existe req.query.busqueda es que el usuario hizo una busqueda
+    let biblioteca = [];
+    if (req.query.busqueda) { // Hago la busqueda
+      // Busco req.query.busqueda en el titulo del libro
+      biblioteca = await LibroModel.find({titulo: req.query.busqueda}).lean();
+    } else {
+      biblioteca = await LibroModel.find().lean();
+    }
+
     res.render('biblioteca', {biblioteca: biblioteca});
 });
 
