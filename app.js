@@ -35,7 +35,7 @@ const LibroSchema = new mongoose.Schema({
     sinopsis: String,
     editorial: String,
     //imagen: String
-    //género? es un checkbox
+    genero: String
     
 });
 
@@ -67,7 +67,8 @@ app.post('/agregar', async function(req,res){
       titulo: req.body.titulo,
       autor: req.body.autor,
       sinopsis: req.body.sinopsis,
-      editorial: req.body.editorial
+      editorial: req.body.editorial,
+      genero: req.body.genero
     });
 	res.redirect('/');
 });
